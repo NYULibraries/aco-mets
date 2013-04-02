@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mets SYSTEM "file:/Users/jgp/dl/projects/ACO/dev/aco-mets/examples/one-ie-to-many-source-child_mets.dtd">
+<mets xmlns="http://www.loc.gov/METS/" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.loc.gov/METS/ http://www.loc.gov/standards/mets/version191/mets.xsd http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/mods.xsd"
+    ID="mets" LABEL="" OBJID="" PROFILE="" xmlns:mods="http://www.loc.gov/mods/v3" TYPE="ACO:LOOK-AND-FEEL-TEXT:IE-SO-1-1">
+    <dmdSec ID="dmd-0000001"><!-- point to a MARCXML document --></dmdSec>
+    <dmdSec ID="dmd-arab">
+        <mdWrap MDTYPE="MODS">
+            <xmlData>
+                <mods:recordInfo>
+                    <mods:languageOfCataloging>
+                        <mods:languageTerm>ara</mods:languageTerm>
+                        <mods:scriptTerm type="code">Arab</mods:scriptTerm>
+                    </mods:languageOfCataloging>
+                </mods:recordInfo>
+            </xmlData>
+        </mdWrap>
+    </dmdSec>
+    <dmdSec ID="dmd-latin">
+        <mdWrap MDTYPE="MODS">
+            <xmlData>
+                <mods:recordInfo>
+                    <mods:languageOfCataloging>
+                        <mods:languageTerm/>
+                        <mods:scriptTerm/>
+                    </mods:languageOfCataloging>
+                </mods:recordInfo>
+            </xmlData>
+        </mdWrap>
+    </dmdSec>
+    <amdSec>
+        <digiprovMD ID="foo">
+            <mdRef LOCTYPE="URL" MDTYPE="OTHER" OTHERMDTYPE="CSV" CHECKSUM="" CHECKSUMTYPE="SHA-512" xlink:href="relative-path-to-environment-of-creation.csv"/>
+        </digiprovMD>
+    </amdSec>
+    <fileSec>
+        <fileGrp USE="CALIBRATION">
+            <file ID="calibration-00000001" USE="target" CHECKSUM="some-awesome-sha1-hash-value" CHECKSUMTYPE="SHA-512" MIMETYPE="image/tiff">
+                <FLocat LOCTYPE="URL" xlink:href="target_m.tif"/>
+            </file>
+        </fileGrp>
+        <fileGrp USE="MASTER">
+            <file ID="master-00000001" CHECKSUM="some-awesome-sha1-hash-value" CHECKSUMTYPE="SHA-512" MIMETYPE="image/tiff">
+                <FLocat LOCTYPE="URL" xlink:href="master/12345678.tif"/>
+            </file>
+            <file ID="master-00000002" CHECKSUM="some-awesome-sha1-hash-value" CHECKSUMTYPE="SHA-512" MIMETYPE="image/tiff">
+                <FLocat LOCTYPE="URL" xlink:href="master/12345679.tif"/>
+            </file>
+        </fileGrp>
+        <fileGrp USE="DERIVATIVE_MAKER">
+            <file ID="derivative_maker-00000001" CHECKSUM="some-awesome-sha1-hash-value" CHECKSUMTYPE="SHA-512" MIMETYPE="image/tiff">
+                <FLocat LOCTYPE="URL" xlink:href="derivatives/12345678.tif"/>
+            </file>
+            <file ID="derivative_maker-00000002" CHECKSUM="some-awesome-sha1-hash-value" CHECKSUMTYPE="SHA-512" MIMETYPE="image/tiff">
+                <FLocat LOCTYPE="URL" xlink:href="derivatives/12345679.tif"/>
+            </file>
+        </fileGrp>
+    </fileSec>
+    <structMap TYPE="1_TO_1_SOURCE">
+        <div TYPE="INTELLECTUAL_ENTITY" ID="quux" DMDID="dmd-arab">
+            <div TYPE="LOGICAL_SECTION ARABIC " LABEL="ch. 1">
+                <div TYPE="PAGE " ORDERLABEL="1" ORDER="1">
+                    <fptr FILEID="master-00000001"/>
+                    <fptr FILEID="derivative_maker-00000001"/>
+                </div>
+                <div TYPE="PAGE_ALT" ORDERLABEL="2" ORDER="2">
+                    <div>
+                        <fptr FILEID="master-00000001"/>
+                        <fptr FILEID="derivative_maker-00000001"/>
+                    </div>
+                    <div>
+                        <fptr FILEID="master-00000001"/>
+                        <fptr FILEID="derivative_maker-00000001"/>
+                    </div>
+                    <div>
+                        <fptr FILEID="master-00000001"/>
+                        <fptr FILEID="derivative_maker-00000001"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </structMap>
+</mets>
