@@ -1,0 +1,189 @@
+#==============================================================================
+# Time-stamp: <2013-08-02 13:31:25 jgp>
+#------------------------------------------------------------------------------
+
+Goal:
+-----
+Create a set of example METS files for book content.
+
+
+Plan:
+-----
+* review notes from meetings
+* define object types
+* define associations
+* define associated metadata
+* define controlled vocabulary
+* create sample files
+
+Terms:
+------
+* source object
+* intellectual entity
+
+
+Object Types:
+-------------
+one-ie-to-one-so
+one-ie-to-many-so
+many-ie-to-one-so
+
+
+
+object type: intellectual-entity
+             source-object
+	  
+ie-types:    maps-to-one
+             maps-to-many
+
+so-types:    contains-one
+             contains-many
+
+
+types:       one-to-one 
+             intellectual-entity:maps-to-one
+             intellectual-entity:maps-to-many
+             source-object:contains-many
+
+	     why couldn't you just have: 
+	     ---------------------------
+	     one-to-one
+	     source-object
+	     intellectual-entity
+
+
+Other Attributes:
+-----------------
+* get object types from PR spec
+** DCMI Types:
+*** http://purl.org/dc/dcmitype/Text
+*** http://purl.org/dc/dcmitype/Image
+*** http://purl.org/dc/dcmitype/MovingImage
+*** http://purl.org/dc/dcmitype/Sound        
+
+* OCR
+* title
+* call number
+* isbn 
+* binding_orientation (vertical, horizontal)
+* scan_order
+* read_order
+* scan_date
+* scanning_notes
+* language code
+* volume
+* number
+* subtitle
+* description
+* sequence number
+* page number
+* slot type (page, insert, oversized, unnumbered)
+* add left/right/not-imaged (e.g., missing)
+* add binding (vertical / horizontal)
+* add scan direction
+* add reading direction
+* alternate identifiers
+* <check remaining book wip API requirements>
+* environment of creation data
+* language of cataloging
+* calibration (target)
+* missing pages (slug)
+* LOGICAL_SECTION
+* PAGE / PAGE_ALT
+* ORDER / ORDERLABEL
+* simulate inserts, oversized
+* CHAPTER MARKS
+* SOURCE_ENTITY
+* LOGICAL_ENTITY
+* INTELLECTUAL_ENTITY COMPLETE / PART
+* SHA-512
+* agents
+
+* STRUCT MAP CONTAINS OBJECT TYPE
+* filegroups: 
+** CALIBRATION
+** MASTER
+** DERIVATIVE_MAKER
+* dmdSec ID='dmd-arab', 'dmd-latin'
+* digiprov
+* LOGICAL_SECTION LABEL
+* PAGE_ALT
+* PAGE
+* ORDERLABEL
+* ORDER
+* XLink/XPointer
+
+HOW TO INDICATE FILE TO USE FOR PUBLICATION?
+WHERE TO PUT CALIBRATION IMAGE?
+WHERE TO PUT EOC?
+HOW TO LINK TO EOC?
+
+ - PAGE           for numbered pages, 
+   INSERT         for non-integral inserts, and
+   UNNUMBERED     for integral inserts, e.g. plates, 
+   PAGE_ALT       for page with multiple images, 
+   PAGE_MISSING   for missing pages 
+                   ORDERLABEL used for missing page label, 
+                   ORDER needs to be incremented, 
+   PAGE_DEFECTIVE used for pages with known defects, e.g., printing error, torn, defaced
+
+
+
+
+
+
+OCR
+title
+call number
+isbn 
+binding_orientation (vertical, horizontal)
+scan_order
+read_order
+scan_date
+scanning_notes
+language code
+volume
+number
+subtitle
+description
+sequence number
+page number
+slot type (page, insert, oversized, unnumbered)
+add left/right/not-imaged (e.g., missing)
+add binding (vertical / horizontal)
+add scan direction
+add reading direction
+alternate identifiers
+<check remaining book wip API requirements>
+environment of creation data
+language of cataloging
+calibration (target)
+missing pages (slug)
+LOGICAL_SECTION
+PAGE / PAGE_ALT
+ORDER / ORDERLABEL
+simulate inserts, oversized
+CHAPTER MARKS
+SOURCE_ENTITY
+LOGICAL_ENTITY
+INTELLECTUAL_ENTITY COMPLETE / PART
+SHA-512
+agents
+
+STRUCT MAP CONTAINS OBJECT TYPE
+filegroups: 
+ CALIBRATION
+ MASTER
+ DERIVATIVE_MAKER
+dmdSec ID='dmd-arab', 'dmd-latin'
+digiprov
+LOGICAL_SECTION LABEL
+PAGE_ALT
+PAGE
+ORDERLABEL
+ORDER
+XLink/XPointer
+
+
+
+

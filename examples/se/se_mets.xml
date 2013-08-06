@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mets xmlns="http://www.loc.gov/METS/" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.loc.gov/METS/ http://www.loc.gov/standards/mets/version191/mets.xsd http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/mods.xsd"
+    ID="mets" LABEL="princeton_aco000123" OBJID="" PROFILE="" xmlns:mods="http://www.loc.gov/mods/v3">
+    <metsHdr><altRecordID TYPE="PRINCETON">princeton's internal identifier for this object</altRecordID></metsHdr>
+    <dmdSec ID="dmd-00000001">
+        <mdRef LOCTYPE="URL" MDTYPE="OTHER" OTHERMDTYPE="MARCXML" MIMETYPE="application/xml" CHECKSUMTYPE="SHA-512"
+            CHECKSUM="0cf9180a764aba863a67b6d72f0918bc131c6772642cb2dce5a34f0a702f9470ddc2bf125c12198b1995c233c34b4afd346c54a2334c350a948a51b6e8b4e6b6"
+            xlink:href="../princeton_ie123110/princeton_ie123110_marcxml.xml"/>
+    </dmdSec>
+    <dmdSec ID="dmd-00000002">
+        <mdRef LOCTYPE="URL" MDTYPE="OTHER" OTHERMDTYPE="MARCXML" MIMETYPE="application/xml" CHECKSUMTYPE="SHA-512"
+            CHECKSUM="0cf9180a764aba863a67b6d72f0918bc131c6772642cb2dce5a34f0a702f9470ddc2bf125c12198b1995c233c34b4afd346c54a2334c350a948a51b6e8b4e6b6"
+            xlink:href="../princeton_ie123456/princeton_ie123456_marcxml.xml"/>
+    </dmdSec>
+    <!-- PRINCETON: PLEASE CHECK THIS AND MODIFY AS NEEDED -->
+    <dmdSec ID="dmd-arab">
+        <mdWrap MDTYPE="MODS">
+            <xmlData>
+                <mods:recordInfo>
+                    <mods:languageOfCataloging>
+                        <mods:languageTerm>ara</mods:languageTerm>
+                        <mods:scriptTerm type="code">Arab</mods:scriptTerm>
+                    </mods:languageOfCataloging>
+                </mods:recordInfo>
+            </xmlData>
+        </mdWrap>
+    </dmdSec>
+    <dmdSec ID="dmd-latin">
+        <mdWrap MDTYPE="MODS">
+            <xmlData>
+                <mods:recordInfo>
+                    <mods:languageOfCataloging>
+                        <mods:languageTerm/>
+                        <mods:scriptTerm type="code">English</mods:scriptTerm>
+                    </mods:languageOfCataloging>
+                </mods:recordInfo>
+            </xmlData>
+        </mdWrap>
+    </dmdSec>
+    <amdSec>
+        <digiprovMD ID="digiprovmd-00000001">
+            <mdRef LOCTYPE="URL" MDTYPE="OTHER" OTHERMDTYPE="NYU-DL-EOC" MIMETYPE="text/csv" CHECKSUMTYPE="SHA-512" CHECKSUM="some-awesome-sha512-hash-value"
+                xlink:href="imaging-station-001-eoc.csv"/>
+        </digiprovMD>
+        <digiprovMD ID="digiprov-00000002">
+            <mdRef LOCTYPE="URL" MDTYPE="OTHER" OTHERMDTYPE="NYU-DL-DIGITIZATION-NOTES" MIMETYPE="text" CHECKSUMTYPE="SHA-512" CHECKSUM="some-awesome-sha512-hash-value"
+                xlink:href="princeton_aco000123_diginotes.txt"/>
+        </digiprovMD>
+    </amdSec>
+    <fileSec>
+        <fileGrp USE="CALIBRATION">
+            <file ID="calibration-00000001" USE="target" CHECKSUM="some-awesome-sha512-hash-value" CHECKSUMTYPE="SHA-512" MIMETYPE="image/tiff" >
+                <FLocat LOCTYPE="URL" xlink:href="target_m.tif"/>
+            </file>
+        </fileGrp>
+        <fileGrp USE="MASTER">
+            <file ID="master-00000001" CHECKSUM="some-awesome-sha512-hash-value" CHECKSUMTYPE="SHA-512" MIMETYPE="image/tiff">
+                <FLocat LOCTYPE="URL" xlink:href="masters/00000001.tif"/>
+            </file>
+            <file ID="master-00000002" CHECKSUM="some-awesome-sha512-hash-value" CHECKSUMTYPE="SHA-512" MIMETYPE="image/tiff">
+                <FLocat LOCTYPE="URL" xlink:href="masters/00000002.tif"/>
+            </file>
+            <file ID="master-00000003" CHECKSUM="some-awesome-sha512-hash-value" CHECKSUMTYPE="SHA-512" MIMETYPE="image/tiff">
+                <FLocat LOCTYPE="URL" xlink:href="masters/00000003.tif"/>
+            </file>
+            <file ID="master-00000004" CHECKSUM="some-awesome-sha512-hash-value" CHECKSUMTYPE="SHA-512" MIMETYPE="image/tiff">
+                <FLocat LOCTYPE="URL" xlink:href="masters/00000004.tif"/>
+            </file>
+            <file ID="master-00000005" CHECKSUM="some-awesome-sha512-hash-value" CHECKSUMTYPE="SHA-512" MIMETYPE="image/tiff">
+                <FLocat LOCTYPE="URL" xlink:href="masters/00000005.tif"/>
+            </file>
+        </fileGrp>
+        <fileGrp USE="DERIVATIVE_MAKER">
+            <file ID="dmaker-00000001" CHECKSUM="some-awesome-sha512-hash-value" CHECKSUMTYPE="SHA-512" MIMETYPE="image/tiff">
+                <FLocat LOCTYPE="URL" xlink:href="derivatives/00000001.tif"/>
+            </file>
+            <file ID="dmaker-00000002" CHECKSUM="some-awesome-sha512-hash-value" CHECKSUMTYPE="SHA-512" MIMETYPE="image/tiff">
+                <FLocat LOCTYPE="URL" xlink:href="derivatives/00000002.tif"/>
+            </file>
+            <file ID="dmaker-00000003" CHECKSUM="some-awesome-sha512-hash-value" CHECKSUMTYPE="SHA-512" MIMETYPE="image/tiff">
+                <FLocat LOCTYPE="URL" xlink:href="derivatives/00000003.tif"/>
+            </file>
+            <file ID="dmaker-00000004" CHECKSUM="some-awesome-sha512-hash-value" CHECKSUMTYPE="SHA-512" MIMETYPE="image/tiff">
+                <FLocat LOCTYPE="URL" xlink:href="derivatives/00000004.tif"/>
+            </file>
+            <file ID="dmaker-00000005" CHECKSUM="some-awesome-sha512-hash-value" CHECKSUMTYPE="SHA-512" MIMETYPE="image/tiff">
+                <FLocat LOCTYPE="URL" xlink:href="derivatives/00000005.tif"/>
+            </file>
+        </fileGrp>
+    </fileSec>
+    <structMap TYPE="SOURCE_ENTITY:TEXT" ID="sm-00000001" LABEL="NEEDED???">
+        <!-- REQUIRED: ONE DIV THAT DESCRIBES ATTRIBUTES OF SOURCE_ENTITY -->
+        <div TYPE="BINDING:VERTICAL SCAN_ORDER:RIGHT-TO-LEFT READ_ORDER:LEFT-TO-RIGHT">
+            <!-- REQ:   ONE DIV PER INTELLECTUAL ENTITY -->
+            <!-- REQ:   DMDID -->
+            <!-- REQIA: ADMID RIGHTS, -->
+            <div TYPE="INTELLECTUAL_ENTITY" ID="ie-00000001" DMDID="dmd-arab dmd-00000001">
+                <!-- OPTIONAL: LOGICAL_SECTION -->
+                <div TYPE="LOGICAL_SECTION" LABEL="ch. 9" DMDID="dmd-arab">
+                    <div TYPE="PAGE:LEFT" ORDERLABEL="1" ORDER="1">
+                        <fptr FILEID="master-00000001"/>
+                        <fptr FILEID="dmaker-00000001"/>
+                    </div>
+                    <div TYPE="PAGE:RIGHT" ORDERLABEL="2" ORDER="2">
+                        <div>
+                            <fptr FILEID="master-00000002"/>
+                            <fptr FILEID="dmaker-00000002"/>
+                        </div>
+                    </div>
+                    <!-- PRINCETON: COULD YOU PLEASE DESCRIBE THE USE OF "PAGE_ALT" ? -->
+                    <!-- <div TYPE="PAGE_ALT" ORDERLABEL="2" ORDER="2"> -->
+                </div>
+                <div TYPE="INTELLECTUAL_ENTITY" ID="ie-00000002" DMDID="dmd-arab dmd-00000002">
+                    <div TYPE="LOGICAL_SECTION ARABIC " LABEL="ch. 1">
+                        <div TYPE="PAGE " ORDERLABEL="1" ORDER="1">
+                            <fptr FILEID="master-00000001"/>
+                            <fptr FILEID="dmaker-00000001"/>
+                        </div>
+                        <div TYPE="PAGE_ALT" ORDERLABEL="1" ORDER="1">
+                            <div>
+                                <fptr FILEID="master-00000001"/>
+                                <fptr FILEID="dmaker-00000001"/>
+                            </div>
+                            <div>
+                                <fptr FILEID="master-00000001"/>
+                                <fptr FILEID="dmaker-00000001"/>
+                            </div>
+                            <div>
+                                <fptr FILEID="master-00000001"/>
+                                <fptr FILEID="dmaker-00000001"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div TYPE="LOGICAL_SECTION ARABIC " LABEL="ch. 1">
+                <div TYPE="PAGE " ORDERLABEL="1" ORDER="1">
+                    <fptr FILEID="master-00000001"/>
+                    <fptr FILEID="dmaker-00000001"/>
+                </div>
+                <div TYPE="PAGE_ALT" ORDERLABEL="2" ORDER="2">
+                    <div>
+                        <fptr FILEID="master-00000001"/>
+                        <fptr FILEID="dmaker-00000001"/>
+                    </div>
+                    <div>
+                        <fptr FILEID="master-00000001"/>
+                        <fptr FILEID="dmaker-00000001"/>
+                    </div>
+                    <div>
+                        <fptr FILEID="master-00000001"/>
+                        <fptr FILEID="dmaker-00000001"/>
+                    </div>
+                </div>
+            </div>
+            <div TYPE="INTELLECTUAL_ENTITY" DMDID="dmd-arab dmd-00000002">
+                <div TYPE="LOGICAL_SECTION ARABIC " LABEL="ch. 1">
+                    <div TYPE="PAGE " ORDERLABEL="1" ORDER="1">
+                        <fptr FILEID="master-00000001"/>
+                        <fptr FILEID="dmaker-00000001"/>
+                    </div>
+                    <div TYPE="PAGE_ALT" ORDERLABEL="2" ORDER="2">
+                        <div>
+                            <fptr FILEID="master-00000001"/>
+                            <fptr FILEID="dmaker-00000001"/>
+                        </div>
+                        <div>
+                            <fptr FILEID="master-00000001"/>
+                            <fptr FILEID="dmaker-00000001"/>
+                        </div>
+                        <div>
+                            <fptr FILEID="master-00000001"/>
+                            <fptr FILEID="dmaker-00000001"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </structMap>
+</mets>

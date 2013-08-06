@@ -58,8 +58,7 @@
     </fileSec>
     <structMap TYPE="MANY_TO_MANY_PARENT">
         <div>
-            <div TYPE="INTELLECTUAL_ENTITY" ID="quux" DMDID="dmd-arab dmd-0000001">
-            </div>
+            <div TYPE="INTELLECTUAL_ENTITY" ID="quux" DMDID="dmd-arab dmd-0000001"> </div>
             <div TYPE="INTELLECTUAL_ENTITY" ID="bar" DMDID="dmd-arab dmd-0000002">
                 <div TYPE="LOGICAL_SECTION ARABIC " LABEL="ch. 1">
                     <div TYPE="PAGE " ORDERLABEL="1" ORDER="1">
