@@ -72,17 +72,17 @@ aco-mets
      * an integral insert, e.g., plates
    * PAGE_ALT
      * an alternate view of the page, e.g., an image of the page with non-integral insert overlaying text
-   * PAGE_MISSING
+   * PAGE\_MISSING
      * used to indicate missing pages
-   * PAGE_DEFECTIVE
-     * used for pages with known defects, e.g., printing error, torn, defaced
+   * PAGE\_DEFECTIVE
+     * a page with known defects, e.g., printing error, torn, defaced
    * OVERSIZED
-     * used for pages that cannot be imaged in a single master image
+     * a page that cannot be imaged in a single photograph and therefore has multiple master images
     
 <h4>terms</h4>
 * intellectual entity
-  * "Intellectual Entity — a coherent unit of digital content which make up a single unit, e.g. the digitised pages of a book, or the complete set of files which make up a web page. Intellectual Entities can contain other Intellectual Entities. An Intellectual Entity can have one or more Digital Representation — the same content with different file formats, structures or functionalities, e.g. digital images in both TIFF and JPEG formats. Although defined in the data model, Intellectual Entity is regarded as out of scope for metadata specifications", from :http://www.dcc.ac.uk/resources/briefing-papers/standards-watch-papers/premis-data-dictionary , accessed 2013-08-07
+  * "Intellectual Entity — a coherent unit of digital content which make up a single unit, e.g. the digitised pages of a book, or the complete set of files which make up a web page. Intellectual Entities can contain other Intellectual Entities. An Intellectual Entity can have one or more Digital Representation — the same content with different file formats, structures or functionalities, e.g. digital images in both TIFF and JPEG formats. Although defined in the data model, Intellectual Entity is regarded as out of scope for metadata specifications", from : <a href="http://www.dcc.ac.uk/resources/briefing-papers/standards-watch-papers/premis-data-dictionary">http://www.dcc.ac.uk/resources/briefing-papers/standards-watch-papers/premis-data-dictionary</a> , accessed 2013-08-07
   
 * volume
-  * "...In the physical sense, all the written or printed matter contained in a single binding, portfolio, etc., as originally issued or bound subsequent to issue (AACR2). Often used synonymously, in this sense, with book...", http://www.abc-clio.com/ODLIS/odlis_v.aspx, accessed 2013-08-07
+  * "...In the physical sense, all the written or printed matter contained in a single binding, portfolio, etc., as originally issued or bound subsequent to issue (AACR2). Often used synonymously, in this sense, with book...", <a href="http://www.abc-clio.com/ODLIS/odlis_v.aspx">http://www.abc-clio.com/ODLIS/odlis_v.aspx</a>, accessed 2013-08-07
 
