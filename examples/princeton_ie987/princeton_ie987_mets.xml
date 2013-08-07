@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mets xmlns="http://www.loc.gov/METS/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.loc.gov/METS/ http://www.loc.gov/standards/mets/version191/mets.xsd" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xptr="http://"
+    xmlns:mods="http://www.loc.gov/mods/v3">
+    <metsHdr CREATEDATE="2013-08-06T22:14:48" LASTMODDATE="2013-08-06T22:14:48" RECORDSTATUS="DRAFT">
+        <agent ROLE="DISSEMINATOR" TYPE="ORGANIZATION">
+            <name>Princeton University Libraries</name>
+        </agent>
+        <agent ROLE="CREATOR" TYPE="INDIVIDUAL">
+            <name>name of person who generated METS</name>
+        </agent>
+        <agent ROLE="DISSEMINATOR" TYPE="OTHER">
+            <name>dissemination tool version?</name>
+        </agent>
+        <altRecordID TYPE="PRINCETON-IDENTIFIER">princeton local identifier here</altRecordID>
+    </metsHdr>
+    <dmdSec ID="dmd-arab">
+        <mdWrap MDTYPE="MODS">
+            <xmlData>
+                <mods:recordInfo>
+                    <mods:languageOfCataloging>
+                        <mods:languageTerm>ara</mods:languageTerm>
+                        <mods:scriptTerm type="code">Arab</mods:scriptTerm>
+                    </mods:languageOfCataloging>
+                </mods:recordInfo>
+            </xmlData>
+        </mdWrap>
+    </dmdSec>
+    <dmdSec ID="dmd-latin">
+        <mdWrap MDTYPE="MODS">
+            <xmlData>
+                <mods:recordInfo>
+                    <mods:languageOfCataloging>
+                        <mods:languageTerm/>
+                        <mods:scriptTerm type="code">English</mods:scriptTerm>
+                    </mods:languageOfCataloging>
+                </mods:recordInfo>
+            </xmlData>
+        </mdWrap>
+    </dmdSec>
+    <dmdSec ID="dmd-00000001">
+        <mdRef LOCTYPE="URL" MDTYPE="OTHER" OTHERMDTYPE="MARCXML" CHECKSUMTYPE="SHA-512"
+            CHECKSUM="a518adf2a82959c27c95c5d8768015b6892f8740e5a01c873e501ba1643ad4018f423ce0dd53bbb5ef72df634cd8a3a4f8d0b3f476ebc2e0593601b7f0b25d09" xlink:type="simple"
+            xlink:href="princeton_ie987_marcxml.xml"/>
+    </dmdSec>
+    <structMap ID="smd-00000001" TYPE="INTELLECTUAL_ENTITY">
+        <div DMDID="dmd-00000001 dmd-arab"><mptr LOCTYPE="URL"  xlink:type="simple" xlink:href="../princeton_book123/princeton_book123_mets.xml#ie-00000001"/></div>
+    </structMap>
+</mets>
