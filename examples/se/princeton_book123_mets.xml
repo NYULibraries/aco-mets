@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mets xmlns="http://www.loc.gov/METS/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.loc.gov/METS/ http://www.loc.gov/standards/mets/version191/mets.xsd" xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:mods="http://www.loc.gov/mods/v3">
+    <!-- THIS SECTION IS OPTIONAL -->
+    <metsHdr CREATEDATE="2013-08-06T22:14:48" LASTMODDATE="2013-08-06T22:14:48" RECORDSTATUS="DRAFT">
+        <agent ROLE="DISSEMINATOR" TYPE="ORGANIZATION">
+            <name>Princeton University Libraries</name>
+        </agent>
+        <agent ROLE="CREATOR" TYPE="INDIVIDUAL">
+            <name>name of person who generated METS</name>
+        </agent>
+        <agent ROLE="DISSEMINATOR" TYPE="OTHER">
+            <name>dissemination tool version?</name>
+        </agent>
+        <altRecordID TYPE="PRINCETON-IDENTIFIER">princeton local identifier here</altRecordID>
+    </metsHdr>
+    <dmdSec ID="dmd-arab">
+        <mdWrap MDTYPE="MODS">
+            <xmlData>
+                <mods:recordInfo>
+                    <mods:languageOfCataloging>
+                        <mods:languageTerm>ara</mods:languageTerm>
+                        <mods:scriptTerm type="code">Arab</mods:scriptTerm>
+                    </mods:languageOfCataloging>
+                </mods:recordInfo>
+            </xmlData>
+        </mdWrap>
+    </dmdSec>
+    <dmdSec ID="dmd-latin">
+        <mdWrap MDTYPE="MODS">
+            <xmlData>
+                <mods:recordInfo>
+                    <mods:languageOfCataloging>
+                        <mods:languageTerm/>
+                        <mods:scriptTerm type="code">English</mods:scriptTerm>
+                    </mods:languageOfCataloging>
+                </mods:recordInfo>
+            </xmlData>
+        </mdWrap>
+    </dmdSec>
+    <dmdSec ID="dmd-00000001">
+        <mdRef LOCTYPE="URL" MDTYPE="OTHER" OTHERMDTYPE="MARCXML" CHECKSUMTYPE="SHA-512"
+            CHECKSUM="a518adf2a82959c27c95c5d8768015b6892f8740e5a01c873e501ba1643ad4018f423ce0dd53bbb5ef72df634cd8a3a4f8d0b3f476ebc2e0593601b7f0b25d09" xlink:type="simple"
+            xlink:href="princeton_ie987_marcxml.xml"/>
+    </dmdSec>
+    <dmdSec ID="dmd-00000002">
+        <mdRef LOCTYPE="URL" MDTYPE="OTHER" OTHERMDTYPE="MARCXML" CHECKSUMTYPE="SHA-512"
+            CHECKSUM="d2dda69aa9ec141fa8b19ca65453fce881a3effb96fa67477eef3c6e9efa9e7cdee9671b7836fa4264c084d1ed326c753d5d0f6e5e5f75e72dcfe920afd5ddd8" xlink:type="simple"
+            xlink:href="princeton_ie989_marcxml.xml"/>
+    </dmdSec>
+    <amdSec>
+        <digiprovMD ID="dpmd-00000001">
+            <mdRef LOCTYPE="URL" MDTYPE="OTHER" OTHERMDTYPE="NYU-DLTS-EOC" CHECKSUMTYPE="SHA-512"
+                CHECKSUM="694b0e8b4f8f725e44bde334845d14ae8e41e7b9dfd8e8c15cdeb2b80f6269382e72cd8281c093f289d36139c4546d39419653fff82555388cca4ad75122d1cf" xlink:type="simple"
+                xlink:href="princeton_book123_eoc.csv"/>
+        </digiprovMD>
+        <!-- QUESTION: 
+             Interested in Princeton's opinion:
+             Need location for calibration target.
+             I think of the calibration target as digiprov and therefore I have created a digiprov element for the calibration target.
+             The other option is to create a separate struct map with USE="CALIBRATION".
+             Thoughts?
+          -->
+        <digiprovMD ID="dpmd-00000002">
+            <mdRef LOCTYPE="URL" MDTYPE="OTHER" OTHERMDTYPE="CALIBRATION-TARGET-IMAGE" CHECKSUMTYPE="SHA-512"
+                CHECKSUM="184ce839fc02cb9e9dc274f9ed9912786d917ae4e038e768cce43bef9c9ee1521ecb76aefeb9e9ce4b8b7e65559c129097c59b5a5deb33b727ca995c3836b020" xlink:type="simple"
+                xlink:href="princeton_book123_target_m.tif"/>
+        </digiprovMD>
+    </amdSec>
+    <fileSec>
+        <fileGrp ID="fg-00000001" USE="MASTER" ADMID="dpmd-00000001 dpmd-00000002">
+            <file ID="f-00000001m" MIMETYPE="image/tiff" CHECKSUMTYPE="SHA-512"
+                CHECKSUM="16df2c936ac96892a2522a403f20d3c1552177c9b2365c4ef7b2f65942e06e76f9a574efd208903b9c3bdadb8e6d962d57d446846f1b05707e3a00899f28419a">
+                <FLocat LOCTYPE="URL" xlink:type="simple" xlink:href="00000001.tif"/>
+            </file>
+            <file ID="f-00000002m" MIMETYPE="image/tiff" CHECKSUMTYPE="SHA-512"
+                CHECKSUM="406e3f3505407e08a14caf75f367b1b3fe86bab1d2745cb91da53bd0419eafebd271c1572bef273c4d7debcd2fff75e90dbad1861aade93d9211dc3e17ff4263">
+                <FLocat LOCTYPE="URL" xlink:type="simple" xlink:href="00000002.tif"/>
+            </file>
+            <file ID="f-00000003m" MIMETYPE="image/tiff" CHECKSUMTYPE="SHA-512"
+                CHECKSUM="d142ceba10ea2509acb4a9858a626e373f9cece0e7bd048b8e54b992f37b3bc0d3bdf2a8b8483c534029a9167cedaadf396c8e684d035b705386b5c4dd43a7af">
+                <FLocat LOCTYPE="URL" xlink:type="simple" xlink:href="00000003.tif"/>
+            </file>
+            <file ID="f-00000004m" MIMETYPE="image/tiff" CHECKSUMTYPE="SHA-512"
+                CHECKSUM="29c1302ea597e662dc5bd9cad2c40753fc4789d33d2fb612cdf7b415bc0f1a0028acd9a88277422083af98a678d9755d4b384d0ab2801d77011ed8b2481e514c">
+                <FLocat LOCTYPE="URL" xlink:type="simple" xlink:href="00000004.tif"/>
+            </file>
+            <file ID="f-00000005m" MIMETYPE="image/tiff" CHECKSUMTYPE="SHA-512"
+                CHECKSUM="56effc638bc491b7ca6e7c200aee9fa9fcf5037279bae99b3d32a9f57bf4a72ea37a75e49855ecffa01917ab90e5ecd0c07805bdcd7652b15fe3c0d07675d7b6">
+                <FLocat LOCTYPE="URL" xlink:type="simple" xlink:href="00000005.tif"/>
+            </file>
+            <file ID="f-00000006m" MIMETYPE="image/tiff" CHECKSUMTYPE="SHA-512"
+                CHECKSUM="b29b420e7e03de71490b87db5db36b3c00c86ecaa9b760da571c775dc05d25747eb2a15014dd8ef72261b958672917c24a0d05e38011320e8186fbbc876392a0">
+                <FLocat LOCTYPE="URL" xlink:type="simple" xlink:href="00000006.tif"/>
+            </file>
+            <file ID="f-00000007m" MIMETYPE="image/tiff" CHECKSUMTYPE="SHA-512"
+                CHECKSUM="1a2317d1adc965034eefd3e8fcf8b94d8a2fa8913e3e9f41e1032779eefb5047354fd367aa3568d55ee56c4b00342a6a11a4746459b60953c78e0ca12a3e328e">
+                <FLocat LOCTYPE="URL" xlink:type="simple" xlink:href="00000007.tif"/>
+            </file>
+            <file ID="f-00000008m" MIMETYPE="image/tiff" CHECKSUMTYPE="SHA-512"
+                CHECKSUM="82c56115aed0b74dfb9a1e591153edc169da697aeb16a7ed4f504e714242dcf27ac3b08c336f8e7cb8dffcee3d6e07a61b466065422879baab01618ce806f621">
+                <FLocat LOCTYPE="URL" xlink:type="simple" xlink:href="00000008.tif"/>
+            </file>
+            <file ID="f-00000009m" MIMETYPE="image/tiff" CHECKSUMTYPE="SHA-512"
+                CHECKSUM="ecab8ec51febc53486d5a16df7fc79963a1eb964a2cc104fec9a397351ab3771542db166beb5e653d836b151ddf9336c3b61c954e94ec3e51c01a812d4fe2f59">
+                <FLocat LOCTYPE="URL" xlink:type="simple" xlink:href="00000009.tif"/>
+            </file>
+            <file ID="f-00000010m" MIMETYPE="image/tiff" CHECKSUMTYPE="SHA-512"
+                CHECKSUM="8c56d1184625157459d9bfce711972a499096b6a63c59945f5f43136d5d25496a0be08893280c9ba745fe45b504f4df8439325b407abb5a138e072d1f155fcd2">
+                <FLocat LOCTYPE="URL" xlink:type="simple" xlink:href="00000010.tif"/>
+            </file>
+        </fileGrp>
+    </fileSec>
+    <!-- SIMULATING A SOURCE ENTITY THAT CONTAINS TWO DISTINCT INTELLECTUAL ENTITIES 
+         Valid div TYPES =  PAGE
+                            INSERT
+                            UNNUMBERED
+                            PAGE_ALT
+                            PAGE_MISSING
+                            PAGE_DEFECTIVE
+        
+        the following page orientation information can be combined with the TYPE values listed above:
+                            LEFT
+                            RIGHT
+    -->
+    <structMap ID="smd-00000001" TYPE="SOURCE_ENTITY:TEXT BINDING_ORIENTATION:VERTICAL SCAN_ORDER:LEFT_TO_RIGHT READ_ORDER:RIGHT_TO_LEFT">
+        <div>
+            <div TYPE="INTELLECTUAL_ENTITY" ID="ie-00000001" DMDID="dmd-00000001 dmd-arab">
+                <div ID="princeton_book123_00000001" ORDER="1" ORDERLABEL="i" TYPE="PAGE RIGHT">
+                    <fptr FILEID="f-00000001m"/>
+                </div>
+                <div ID="princeton_book123_00000002" ORDER="2" ORDERLABEL="ii" TYPE="PAGE LEFT">
+                    <fptr FILEID="f-00000002m"/>
+                </div>
+                <div ID="princeton_book123_00000003" ORDER="3" ORDERLABEL="1" TYPE="PAGE RIGHT">
+                    <fptr FILEID="f-00000003m"/>
+                </div>
+                <div ID="princeton_book123_00000004" ORDER="4" ORDERLABEL="2" TYPE="PAGE LEFT">
+                    <fptr FILEID="f-00000004m"/>
+                </div>
+                <div ID="princeton_book123_00000005" ORDER="5" ORDERLABEL="3" TYPE="PAGE RIGHT">
+                    <fptr FILEID="f-00000005m"/>
+                </div>
+            </div>
+            <div TYPE="INTELLECTUAL_ENTITY" ID="ie-00000002" DMDID="dmd-00000002 dmd-latin">
+                <div ID="princeton_book123_00000006" ORDER="1" ORDERLABEL="1" TYPE="PAGE LEFT">
+                    <fptr FILEID="f-00000006m"/>
+                </div>
+                <div ID="princeton_book123_00000007" ORDER="2" ORDERLABEL="2" TYPE="PAGE RIGHT">
+                    <fptr FILEID="f-00000007m"/>
+                </div>
+                <div ID="princeton_book123_00000008" ORDER="3" ORDERLABEL="3" TYPE="PAGE LEFT">
+                    <fptr FILEID="f-00000008m"/>
+                </div>
+                <div ID="princeton_book123_00000009" ORDER="4" ORDERLABEL="" TYPE="UNNUMBERED RIGHT">
+                    <fptr FILEID="f-00000009m"/>
+                </div>
+                <div ID="princeton_book123_00000010" ORDER="5" ORDERLABEL="" TYPE="UNNUMBERED LEFT">
+                    <fptr FILEID="f-00000010m"/>
+                </div>
+            </div>
+        </div>
+    </structMap>
+</mets>
