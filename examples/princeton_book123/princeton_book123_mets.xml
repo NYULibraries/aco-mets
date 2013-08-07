@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <mets xmlns="http://www.loc.gov/METS/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://www.loc.gov/METS/ http://www.loc.gov/standards/mets/version191/mets.xsd" xmlns:xlink="http://www.w3.org/1999/xlink"
-    xmlns:mods="http://www.loc.gov/mods/v3">
-    <!-- THIS SECTION IS OPTIONAL -->
+    xmlns:mods="http://www.loc.gov/mods/v3" OBJID="princeton_book123">
+    <!--  metsHdr use is RECOMMENDED -->
     <metsHdr CREATEDATE="2013-08-06T22:14:48" LASTMODDATE="2013-08-06T22:14:48" RECORDSTATUS="DRAFT">
         <agent ROLE="DISSEMINATOR" TYPE="ORGANIZATION">
             <name>Princeton University Libraries</name>
@@ -39,6 +39,7 @@
             </xmlData>
         </mdWrap>
     </dmdSec>
+    <!-- includes DMD for all intellectual entities in this book -->
     <dmdSec ID="dmd-00000001">
         <mdRef LOCTYPE="URL" MDTYPE="OTHER" OTHERMDTYPE="MARCXML" CHECKSUMTYPE="SHA-512"
             CHECKSUM="a518adf2a82959c27c95c5d8768015b6892f8740e5a01c873e501ba1643ad4018f423ce0dd53bbb5ef72df634cd8a3a4f8d0b3f476ebc2e0593601b7f0b25d09" xlink:type="simple"
@@ -55,11 +56,10 @@
                 CHECKSUM="694b0e8b4f8f725e44bde334845d14ae8e41e7b9dfd8e8c15cdeb2b80f6269382e72cd8281c093f289d36139c4546d39419653fff82555388cca4ad75122d1cf" xlink:type="simple"
                 xlink:href="princeton_book123_eoc.csv"/>
         </digiprovMD>
-        <!-- QUESTION: 
-             Interested in Princeton's opinion:
-             Need location for calibration target.
+        <!-- REQUEST FOR COMMENT: 
+             We need a location for the calibration target.
              I think of the calibration target as digiprov and therefore I have created a digiprov element for the calibration target.
-             The other option is to create a separate struct map with USE="CALIBRATION".
+             The other option is to create a separate struct map with USE="CALIBRATION" but then linking to the MASTER fileGrp is less intuitive (I think).
              Thoughts?
           -->
         <digiprovMD ID="dpmd-00000002">
@@ -112,18 +112,7 @@
             </file>
         </fileGrp>
     </fileSec>
-    <!-- SIMULATING A SOURCE ENTITY THAT CONTAINS TWO DISTINCT INTELLECTUAL ENTITIES 
-         Valid div TYPES =  PAGE
-                            INSERT
-                            UNNUMBERED
-                            PAGE_ALT
-                            PAGE_MISSING
-                            PAGE_DEFECTIVE
-        
-        the following page orientation information can be combined with the TYPE values listed above:
-                            LEFT
-                            RIGHT
-    -->
+    <!-- SIMULATING A SOURCE ENTITY THAT CONTAINS TWO DISTINCT INTELLECTUAL ENTITIES  -->
     <structMap ID="smd-00000001" TYPE="SOURCE_ENTITY:TEXT BINDING_ORIENTATION:VERTICAL SCAN_ORDER:LEFT_TO_RIGHT READ_ORDER:RIGHT_TO_LEFT">
         <div>
             <div TYPE="INTELLECTUAL_ENTITY" ID="ie-00000001" DMDID="dmd-00000001 dmd-arab">
@@ -143,20 +132,26 @@
                     <fptr FILEID="f-00000005m"/>
                 </div>
             </div>
+            <!-- REQUEST FOR COMMENT:
+                 using increasing ORDER number across entire source entity so that source entity can be rendered if needed.
+                 alternative is to reset ORDER number for each intellectual entity, but that might complicate
+                 rendering source entity.
+                 potential impact on intellectual entity rendering platform.
+            -->
             <div TYPE="INTELLECTUAL_ENTITY" ID="ie-00000002" DMDID="dmd-00000002 dmd-latin">
-                <div ID="princeton_book123_00000006" ORDER="1" ORDERLABEL="1" TYPE="PAGE LEFT">
+                <div ID="princeton_book123_00000006" ORDER="6" ORDERLABEL="1" TYPE="PAGE LEFT">
                     <fptr FILEID="f-00000006m"/>
                 </div>
-                <div ID="princeton_book123_00000007" ORDER="2" ORDERLABEL="2" TYPE="PAGE RIGHT">
+                <div ID="princeton_book123_00000007" ORDER="7" ORDERLABEL="2" TYPE="PAGE RIGHT">
                     <fptr FILEID="f-00000007m"/>
                 </div>
-                <div ID="princeton_book123_00000008" ORDER="3" ORDERLABEL="3" TYPE="PAGE LEFT">
+                <div ID="princeton_book123_00000008" ORDER="8" ORDERLABEL="3" TYPE="PAGE LEFT">
                     <fptr FILEID="f-00000008m"/>
                 </div>
-                <div ID="princeton_book123_00000009" ORDER="4" ORDERLABEL="" TYPE="UNNUMBERED RIGHT">
+                <div ID="princeton_book123_00000009" ORDER="9" ORDERLABEL="" TYPE="UNNUMBERED RIGHT">
                     <fptr FILEID="f-00000009m"/>
                 </div>
-                <div ID="princeton_book123_00000010" ORDER="5" ORDERLABEL="" TYPE="UNNUMBERED LEFT">
+                <div ID="princeton_book123_00000010" ORDER="10" ORDERLABEL="" TYPE="UNNUMBERED LEFT">
                     <fptr FILEID="f-00000010m"/>
                 </div>
             </div>

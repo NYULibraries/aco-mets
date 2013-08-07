@@ -2,6 +2,7 @@
 <mets xmlns="http://www.loc.gov/METS/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://www.loc.gov/METS/ http://www.loc.gov/standards/mets/version191/mets.xsd" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xptr="http://"
     xmlns:mods="http://www.loc.gov/mods/v3" OBJID="princeton_ie989">
+    <!--  metsHdr use is RECOMMENDED -->
     <metsHdr CREATEDATE="2013-08-06T22:14:48" LASTMODDATE="2013-08-06T22:14:48" RECORDSTATUS="DRAFT">
         <agent ROLE="DISSEMINATOR" TYPE="ORGANIZATION">
             <name>Princeton University Libraries</name>
@@ -44,6 +45,8 @@
             xlink:href="princeton_ie989_marcxml.xml"/>
     </dmdSec>
     <structMap ID="smd-00000001" TYPE="INTELLECTUAL_ENTITY">
-        <div DMDID="dmd-00000001 dmd-latin"><mptr LOCTYPE="URL"  xlink:type="simple" xlink:href="../princeton_book123/princeton_book123_mets.xml#ie-00000002"/></div>
+        <div DMDID="dmd-00000001 dmd-latin">
+            <mptr LOCTYPE="URL" xlink:type="simple" xlink:href="../princeton_book123/princeton_book123_mets.xml#ie-00000002"/>
+        </div>
     </structMap>
 </mets>
