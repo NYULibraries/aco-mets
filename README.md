@@ -34,6 +34,7 @@ aco-mets
    * INTELLECTUAL\_ENTITY
  * digital object types:
    * TEXT
+     * N.B. 'TEXT' is the only digital object type that will be used for the ACO project.
    * ETEXT
    * AUDIO
    * VIDEO
