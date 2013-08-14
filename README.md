@@ -39,6 +39,8 @@ aco-mets
    * VIDEO
    * IMAGE\_REFLECTIVE
    * IMAGE\_TRANSMISSIVE
+   * IMAGESET\_REFLECTIVE
+   * IMAGESET\_TRANSMISSIVE
  * METS structMap div types:
    * INTELLECTUAL\_ENTITY
      * defines the boundaries of a discrete intellectual entity in a source entity
