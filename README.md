@@ -32,16 +32,8 @@ aco-mets
    * ONE\_TO\_ONE_ENTITY
    * SOURCE\_ENTITY
    * INTELLECTUAL\_ENTITY
- * digital object types:
+ * digital object type for ACO:
    * TEXT
-     * N.B. 'TEXT' is the only digital object type that will be used for the ACO project.
-   * ETEXT
-   * AUDIO
-   * VIDEO
-   * IMAGE\_REFLECTIVE
-   * IMAGE\_TRANSMISSIVE
-   * IMAGESET\_REFLECTIVE
-   * IMAGESET\_TRANSMISSIVE
  * METS structMap div types:
    * INTELLECTUAL\_ENTITY
      * defines the boundaries of a discrete intellectual entity in a source entity
