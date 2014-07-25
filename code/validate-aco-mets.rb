@@ -234,16 +234,7 @@ class ACOMETSValidator
   end
 
   def check_calibration_files
-    # Adding this to account for two cameras (calculating SHA512) -pmg 20140708
-    expected_cnt = 0
-    Dir.glob('*.csv').each do|f|
-        eoc_hash = Digest::SHA512.file(f).hexdigest
-        if eoc_hash == '06935811abbac71e276a14b57047cd89b2a0d32b490484a07b4743ffcee7a29526576140618f15878a21b7a5383160f48abe324d42b03ea976beb810ce042544'
-            expected_cnt    = 1 # zeutschel should have one calibration image
-        elsif eoc_hash == '5abf7e6b119ae26ff54060de9259534ae7e5f1412399350377f1ee23e4a478da7a5224a5d47e47f8af5530602fbc8c0d7d48cdb8f5e4e81fde11443ee3c63a58'
-            expected_cnt    = 2 # bc100 should have two calibration images
-	    end
-	end
+    expected_cnt    = 2
     calibration_cnt = 0
     @doc.search('digiprovMD').each do |d|
       if d.search('mdRef')[0]['OTHERMDTYPE'] == 'CALIBRATION-TARGET-IMAGE'
@@ -316,49 +307,28 @@ end
 #                      ./princeton_foo_marcxml.xml
 
 
-#Dir.glob('*/data/*_mets.xml') do|mets_path|
-#mets_file_path = File.basename(mets_path)
-#puts "validating #{mets_file_path}"
+mets_file_path = ARGV[0]
 
-dir_cnt = 0
-Dir['*/data'].each do |a|
+raise "expecting a METS file" unless File.file?(mets_file_path)
 
-	Dir.chdir(a) do
-	
-		mets_file_path = Dir.glob('*_mets.xml')[0] #ARGV[0]
-		
-		raise "expecting a METS file" unless File.file?(mets_file_path)
-		
-		dir = File.expand_path(File.dirname(mets_file_path))
-		
-		mets_file_name = File.basename(mets_file_path)
-		
-		partner, digi_id = mets_file_name.split('_')
-		
-		expected_mets_filename = 'princeton' + '_' + digi_id + '_' + 'mets.xml'
-		raise "unexpected mets filename: expected #{expected_mets_filename}, got #{mets_file_name}" unless mets_file_name == expected_mets_filename
-		
-		dir_cnt += 1
-		
-		puts "#{mets_file_name}"
-		puts "#{dir}"
-		
-		
-		amv = ACOMETSValidator.new(mets_file_path, {path: dir, partner: partner, digi_id: digi_id})
-		
-		amv.validate
-		
-		#exit 0 if amv.valid?
-		
-		#ap amv.errors
-		#exit 1
-	
-	    if amv.valid?
-	        puts "OK #{dir_cnt}"
-	    elsif ap amv.errors
-	        puts "ERROR"
-	        exit 1
-	    end
-	
-	end
-end
+dir = File.expand_path(File.dirname(mets_file_path))
+
+mets_file_name = File.basename(mets_file_path)
+
+partner, digi_id = mets_file_name.split('_')
+
+expected_mets_filename = 'princeton' + '_' + digi_id + '_' + 'mets.xml'
+raise "unexpected mets filename: expected #{expected_mets_filename}, got #{mets_file_name}" unless mets_file_name == expected_mets_filename
+
+puts "#{mets_file_name}"
+puts "#{dir}"
+
+
+amv = ACOMETSValidator.new(mets_file_path, {path: dir, partner: partner, digi_id: digi_id})
+
+amv.validate
+
+exit 0 if amv.valid?
+
+ap amv.errors
+exit 1
